@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import RoleHub from './pages/RoleHub.jsx'
 import Login from './pages/customer/Login.jsx'
 import Register from './pages/customer/Register.jsx'
@@ -24,7 +24,7 @@ import AdminLayout from './layouts/AdminLayout.jsx'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<RoleHub />} />
         <Route path="/customer/login" element={<AuthLayout />}>
@@ -61,7 +61,7 @@ function App() {
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
